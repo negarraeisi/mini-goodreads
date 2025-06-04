@@ -139,7 +139,7 @@ function Book(props) {
 
   return (
     <div className="book">
-      <img src={`${process.env.PUBLIC_URL}${imageLink}`} alt={title} />
+      <img src={`${process.env.PUBLIC_URL}/${imageLink}`} alt={title} />
       <h5>{title}</h5>
       <h6>{author}</h6>
       <ButtonGroup>
