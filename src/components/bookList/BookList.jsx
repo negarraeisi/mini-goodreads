@@ -18,7 +18,7 @@ function BookList (){
                 <Book
                     key={book.id}
                     id={Number(book.id)} 
-                    imageLink={`${process.env.PUBLIC_URL}${book.imageLink}`}
+                    imageLink={book.imageLink}
                     title={book.title}
                     author={book.author}
                 />

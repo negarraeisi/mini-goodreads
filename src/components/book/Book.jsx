@@ -22,7 +22,8 @@ function Book(props) {
     const bookIdNum = Number(id);
     if (!user || isNaN(bookIdNum)) return 0;
 
-    if (user.currentlyReading && user.currentlyReading.includes(bookIdNum)) return 2;
+    if (user.currentlyReading && user.currentlyReading.includes(bookIdNum))
+      return 2;
     if (user.read && user.read.includes(bookIdNum)) return 1;
     if (user.wantToRead && user.wantToRead.includes(bookIdNum)) return 0;
     return 0;
@@ -35,7 +36,6 @@ function Book(props) {
   }, [getInitialStatus]);
 
   const updateReadingList = async (bookId, newStatusKey) => {
-
     if (!user) {
       alert("Please sign in to manage your books.");
       return;
@@ -45,32 +45,53 @@ function Book(props) {
     const newStatus = options[newStatusKey];
 
     console.log("DEBUG: updateReadingList called for book:", title);
-    console.log("DEBUG: received bookId prop:", bookId, " (type:", typeof bookId, ")");
+    console.log(
+      "DEBUG: received bookId prop:",
+      bookId,
+      " (type:",
+      typeof bookId,
+      ")"
+    );
 
     const bookIdNum = Number(bookId);
-    console.log("DEBUG: converted bookIdNum:", bookIdNum, " (type:", typeof bookIdNum, ")");
-
+    console.log(
+      "DEBUG: converted bookIdNum:",
+      bookIdNum,
+      " (type:",
+      typeof bookIdNum,
+      ")"
+    );
 
     if (isNaN(bookIdNum) || bookIdNum === 0) {
-      console.error("DEBUG: Invalid book ID caused alert.",
-                    "Original bookId prop:", bookId,
-                    "Converted bookIdNum:", bookIdNum,
-                    "Book Title:", title);
+      console.error(
+        "DEBUG: Invalid book ID caused alert.",
+        "Original bookId prop:",
+        bookId,
+        "Converted bookIdNum:",
+        bookIdNum,
+        "Book Title:",
+        title
+      );
       alert("Cannot update book status: Invalid book ID.");
       return;
     }
 
     const cleanAndUnique = (arr) =>
-      Array.from(new Set(arr || []).values())
-        .filter(item => typeof item === 'number' && !isNaN(item));
+      Array.from(new Set(arr || []).values()).filter(
+        (item) => typeof item === "number" && !isNaN(item)
+      );
 
     let updatedWantToRead = cleanAndUnique(user.wantToRead);
     let updatedRead = cleanAndUnique(user.read);
     let updatedCurrentlyReading = cleanAndUnique(user.currentlyReading);
 
-    updatedWantToRead = updatedWantToRead.filter((existingId) => existingId !== bookIdNum);
+    updatedWantToRead = updatedWantToRead.filter(
+      (existingId) => existingId !== bookIdNum
+    );
     updatedRead = updatedRead.filter((existingId) => existingId !== bookIdNum);
-    updatedCurrentlyReading = updatedCurrentlyReading.filter((existingId) => existingId !== bookIdNum);
+    updatedCurrentlyReading = updatedCurrentlyReading.filter(
+      (existingId) => existingId !== bookIdNum
+    );
 
     if (newStatus === "Want to Read") {
       updatedWantToRead.push(bookIdNum);
@@ -129,7 +150,7 @@ function Book(props) {
             const handleSelect = (eventKey) => {
               onClose();
               setAction(eventKey);
-              updateReadingList(id, eventKey); 
+              updateReadingList(id, eventKey);
             };
             return (
               <Popover
