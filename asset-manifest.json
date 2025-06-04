@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/negarraeisi.github.io/minigoodreads/static/css/main.515100a6.css",
-    "main.js": "/negarraeisi.github.io/minigoodreads/static/js/main.ffe07c7b.js",
+    "main.js": "/negarraeisi.github.io/minigoodreads/static/js/main.4ea6d4e4.js",
     "static/js/453.3a223772.chunk.js": "/negarraeisi.github.io/minigoodreads/static/js/453.3a223772.chunk.js",
     "static/media/0000herobackgroud.jpg": "/negarraeisi.github.io/minigoodreads/static/media/0000herobackgroud.ebd40417070eb6a634e3.jpg",
     "index.html": "/negarraeisi.github.io/minigoodreads/index.html",
     "main.515100a6.css.map": "/negarraeisi.github.io/minigoodreads/static/css/main.515100a6.css.map",
-    "main.ffe07c7b.js.map": "/negarraeisi.github.io/minigoodreads/static/js/main.ffe07c7b.js.map",
+    "main.4ea6d4e4.js.map": "/negarraeisi.github.io/minigoodreads/static/js/main.4ea6d4e4.js.map",
     "453.3a223772.chunk.js.map": "/negarraeisi.github.io/minigoodreads/static/js/453.3a223772.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.515100a6.css",
-    "static/js/main.ffe07c7b.js"
+    "static/js/main.4ea6d4e4.js"
   ]
 }
