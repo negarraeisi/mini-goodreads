@@ -33,7 +33,7 @@ function App() {
    }, []);
 
   return (
-    <BrowserRouter basename="/minigoodreads">
+    <BrowserRouter basename="/mini-goodreads">
           <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
       <Header />
       <Routes>
