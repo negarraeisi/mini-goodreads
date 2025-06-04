@@ -83,7 +83,7 @@ function MyBooks() {
           <div className="bookList">
             {currentlyReadingBooks.map((book) => (
               <div key={book.id} className="bookItem">
-                <img src={book.imageLink} alt={book.title} />
+                <img src={`${process.env.PUBLIC_URL}${book.imageLink}`} alt={book.title} />
                 <div className="bookInfo">
                   <h4>{book.title}</h4>
                   <p>by {book.author}</p>
@@ -102,7 +102,7 @@ function MyBooks() {
           <div className="bookList">
             {wantToReadBooks.map((book) => (
               <div key={book.id} className="bookItem">
-                <img src={book.imageLink} alt={book.title} />
+                <img src={`${process.env.PUBLIC_URL}${book.imageLink}`} alt={book.title} />
                 <div className="bookInfo">
                   <h4>{book.title}</h4>
                   <p>by {book.author}</p>
@@ -122,7 +122,7 @@ function MyBooks() {
           <div className="bookList">
             {readBooks.map((book) => (
               <div key={book.id} className="bookItem">
-                <img src={book.imageLink} alt={book.title} />
+                <img src={`${process.env.PUBLIC_URL}${book.imageLink}`} alt={book.title} />
                 <div className="bookInfo">
                   <h4>{book.title}</h4>
                   <p>by {book.author}</p>

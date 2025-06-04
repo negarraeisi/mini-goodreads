@@ -31,7 +31,7 @@ function Gallery() {
         <Link to={`/books/${book.id}`} key={book.id}><div className="item">
         <img
           key={i}
-          src={book.imageLink}
+          src={`${process.env.PUBLIC_URL}${book.imageLink}`}
           alt={book.title}
         /></div></Link>
       ))}
