@@ -1,0 +1,38 @@
+.hero {
+  background-image: url("../../../public/images/0000herobackgroud.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
+.hero h1 {
+  padding: 2rem;
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 10px 2px 8px #161138;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero button {
+  border: 2px solid #161138;
+  background-color: #c4d8ef;
+  margin: 2rem;
+  padding: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-radius: 10px;
+}
+
+.hero button:hover{
+  background-color: #161138;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

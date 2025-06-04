@@ -1,0 +1,11 @@
+
+
+.bookCategory{
+    display: flex;
+    margin: 2rem;
+    border-bottom: 1px #dddd solid;
+}
+
+.bookItem{
+    margin: 1rem;
+}
