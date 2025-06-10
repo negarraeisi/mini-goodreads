@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footerContainer">
 
         <div className="footerSection">
-          <p className="copyright">&copy; {new Date().getFullYear()} Your App Name. All rights reserved.</p>
+          <p className="copyright">&copy; {new Date().getFullYear()} Mini Goodreads by Negar Raeisi. All rights reserved.</p>
           <p className="subtext">Built with passion and code.</p>
         </div>
 
