@@ -10,7 +10,7 @@ function SignUp() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://minigoodreads-api.onrender.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.log("error fetching", err));
@@ -39,7 +39,7 @@ function SignUp() {
       return;
     }
     try {
-      await fetch(`http://localhost:3001/users`, {
+      await fetch(`https://minigoodreads-api.onrender.com/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
